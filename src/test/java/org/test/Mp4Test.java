@@ -19,7 +19,7 @@ public class Mp4Test
 	@Test
 	public void verifyOpenMp4File() throws Exception
 	{
-		String file = "/Users/stevedoubleday/Downloads/ta_talk_grading_zotero.mp4";
+		String file = "ta_talk_grading_zotero.mp4";
 		FileChannel fc = new FileInputStream(file).getChannel();
 //		IsoFile iso = new IsoFile(fc); 
 		IsoFile iso = new IsoFile(file);
