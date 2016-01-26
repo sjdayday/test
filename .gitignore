@@ -1,3 +1,7 @@
 target
 bin
 *.mp4
+IREC0001W.MP3
+.settings
+.project
+.classpath

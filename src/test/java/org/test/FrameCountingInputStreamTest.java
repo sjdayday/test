@@ -24,9 +24,10 @@ public class FrameCountingInputStreamTest
 	@Before
 	public void setUp() throws Exception
 	{
-		file = new File("/Users/stevedoubleday/Dropbox/CS 3B Fall \'13/GetTune/IREC0001.MP3"); 
+		file = new File("IREC0001.MP3"); 
+//		file = new File("/Users/stevedoubleday/Dropbox/CS 3B Fall \'13/GetTune/IREC0001.MP3"); 
 //				"/Users/stevedoubleday/Desktop/IREC0001.MP3"); 
-		outfile = new File("/Users/stevedoubleday/Dropbox/CS 3B Fall \'13/GetTune/IREC0001W.MP3"); 
+		outfile = new File("IREC0001W.MP3"); 
 
 //		outfile = new File("/Users/stevedoubleday/Desktop/IREC0001W.MP3");
 //		List providers = JDK16Services.getProviders(AudioFileReader.class); 
