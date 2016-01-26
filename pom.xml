@@ -3,7 +3,18 @@
   <groupId>test</groupId>
   <artifactId>test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+ <dependencies>
+<dependency>
+  <groupId>com.googlecode.mp4parser</groupId> 
+  <artifactId>isoparser</artifactId> 
+  <version>1.0-RC-27</version> 
+</dependency>
+ 	<dependency>
+ 		<groupId>com.google.code.gson</groupId>
+ 		<artifactId>gson</artifactId>
+ 		<version>2.2.4</version>
+ 	</dependency>
+ </dependencies> 
  <!-- 	<repositories>
 		<repository>
 			<id>imperial-college</id>
