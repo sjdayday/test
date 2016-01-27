@@ -7,3 +7,5 @@ IREC0001W.MP3
 src/main/resources/*.mp4
 src/main/resources/dash/*.mp4
 src/main/resources/davidappend/*.mp4
+pom.xml.*
+release.properties
