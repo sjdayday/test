@@ -19,7 +19,7 @@
         <developerConnection>scm:git:git@github.com:sjdayday/test.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-   <repositories>
+<!--    <repositories>
         <repository>
             <id>PIPEMarkovChain-mvn-repo</id>
             <url>https://raw.github.com/sarahtattersall/PIPEMarkovChain/mvn-repo/</url>
@@ -29,14 +29,14 @@
             </snapshots>
         </repository>
     </repositories>
-
+ -->
     <dependencies>
-        <dependency>
+<!--         <dependency>
             <groupId>uk.ac.imperial</groupId>
             <artifactId>pipe-markov-chain</artifactId>
             <version>1.0.2-SNAPSHOT</version>
         </dependency>
-		<dependency>
+ -->		<dependency>
 		  <groupId>com.googlecode.mp4parser</groupId> 
 		  <artifactId>isoparser</artifactId> 
 		  <version>1.0-RC-27</version> 
