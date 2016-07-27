@@ -19,24 +19,23 @@
         <developerConnection>scm:git:git@github.com:sjdayday/test.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-<!--    <repositories>
-        <repository>
-            <id>PIPEMarkovChain-mvn-repo</id>
-            <url>https://raw.github.com/sarahtattersall/PIPEMarkovChain/mvn-repo/</url>
+    <repositories>
+         <repository>
+            <id>test-dependency-mvn-repo</id>
+            <url>https://raw.github.com/sjdayday/test-dependency/mvn-repo/</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
-    </repositories>
- -->
+     </repositories>
     <dependencies>
-<!--         <dependency>
-            <groupId>uk.ac.imperial</groupId>
-            <artifactId>pipe-markov-chain</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
+        <dependency>
+         <groupId>test</groupId>
+         <artifactId>test-dependency</artifactId>
+         <version>0.0.8-SNAPSHOT</version>
         </dependency>
- -->		<dependency>
+ 		<dependency>
 		  <groupId>com.googlecode.mp4parser</groupId> 
 		  <artifactId>isoparser</artifactId> 
 		  <version>1.0-RC-27</version> 
@@ -170,8 +169,8 @@
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
                     <branch>refs/heads/mvn-repo</branch>
                     <includes><include>**/*</include></includes>
-                    <repositoryName>PIPECore</repositoryName>
-                    <repositoryOwner>sjdayday</repositoryOwner>   <!-- for 1.0.2-SNAPSHOT, was: sarahtattersall -->
+                    <repositoryName>test</repositoryName>
+                    <repositoryOwner>sjdayday</repositoryOwner>  
                     <merge>true</merge>
                 </configuration>
                 <executions>
@@ -215,10 +214,27 @@
             </plugin>
 
             <plugin>
+               <!-- this version and maven-scm-provider-gitexe 1.8.1 correctly 
+               generate a release jar rather than a SNAPSHOT jar, but 
+               do not correctly distinguish branch and tag by the same name
+               so force an extra "-" in the tagNameFormat to keep them unique.
+               later versions of the two plugins (e.g., 2.5.3 and 1.9.4) 
+               distinguish them via refs/heads/xxx and refs/tags/xxx but don't 
+               yet fix the original problem of generating a SNAPSHOT jar.  -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.4.2</version>
-            </plugin>
+                  <configuration>
+          			<tagNameFormat>@{project.artifactId}--@{project.version}</tagNameFormat>
+        		  </configuration>
+			      <dependencies>
+			        <dependency>
+			          <groupId>org.apache.maven.scm</groupId>
+			          <artifactId>maven-scm-provider-gitexe</artifactId>
+			          <version>1.8.1</version>
+			        </dependency>
+			       </dependencies>
+            </plugin>            
         </plugins>
     </build>
 
