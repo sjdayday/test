@@ -33,7 +33,7 @@
         <dependency>
          <groupId>test</groupId>
          <artifactId>test-dependency</artifactId>
-         <version>0.0.8-SNAPSHOT</version>
+         <version>0.0.7-SNAPSHOT</version>
         </dependency>
  		<dependency>
 		  <groupId>com.googlecode.mp4parser</groupId> 
